@@ -1,8 +1,6 @@
 package v1alpha1
 
 import (
-	"encoding/json"
-
 	digest "github.com/opencontainers/go-digest"
 )
 
@@ -25,8 +23,9 @@ type Descriptor struct {
 	// URLs specifies a list of URLs from which this object MAY be downloaded
 	URLs []string `json:"urls,omitempty"`
 
-	// Attributes contains typed attributes for this artifact.
-	Attributes map[string]json.RawMessage `json:"attributes,omitempty"`
+	// Attributes references attribute objects for an artifact, by digest.
+	// The referenced configuration object is a JSON blob can be used to store metadata.
+	Attributes []Descriptor `json:"attributes,omitempty"`
 
 	// Annotations contains arbitrary metadata relating to the targeted content.
 	Annotations map[string]string `json:"annotations,omitempty"`

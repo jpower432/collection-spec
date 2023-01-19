@@ -12,4 +12,7 @@ const (
 
 	// MediaTypeCollectionManifest specifies the media type for an Emporous Collection manifest.
 	MediaTypeCollectionManifest = "application/vnd.emporous.collection.manifest.v1+json"
+
+	// MediaTypeAttributes specifies the media type for an Emporous attribute object.
+	MediaTypeAttributes = "application/vnd.emporous.attributes.v1+json"
 )
