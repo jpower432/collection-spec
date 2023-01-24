@@ -13,7 +13,7 @@ type Manifest struct {
 
 	// Attributes references attribute objects for an artifact, by digest.
 	// The referenced configuration object is a JSON blob can be used to store metadata.
-	Attributes []Descriptor `json:"attributes,omitempty"`
+	Attributes Descriptor `json:"attributes,omitempty"`
 
 	// Links defines references to any manifest(s) for Collections that this Collection
 	// is dependent on or relates to.

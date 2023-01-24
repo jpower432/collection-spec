@@ -25,7 +25,7 @@ type Descriptor struct {
 
 	// Attributes references attribute objects for an artifact, by digest.
 	// The referenced configuration object is a JSON blob can be used to store metadata.
-	Attributes []Descriptor `json:"attributes,omitempty"`
+	Attributes Descriptor `json:"attributes,omitempty"`
 
 	// Annotations contains arbitrary metadata relating to the targeted content.
 	Annotations map[string]string `json:"annotations,omitempty"`
